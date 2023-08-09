@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block form %}
+    <h1>Madlibs</h1>
+    <h2>Select your story: </h2>
+    <form method="get" action="/answers">
+        <label for="storySelection">story: </label>
+        <select id="storySelection" name="storySelection">
+            <option value="story_0">A Tale of a Creature</option>
+            <option value="story_1">A Magical Land</option>
+            <option value="story_2">A Hidden Power</option>
+            <option value="story_3">A Breathtaking Landscape</option>
+            <option value="story_4">A Grand Contest</option>
+            <option value="story_5">Default</option>
+        </select>
+        <input type="submit"></input>
+    </form>
+{% endblock %}
+{% block content %}
+    <div id="storyPreview">
+        <p>Once upon a time in a {place}, there lived a curious {noun}. It was a {adjective} creature that loved to {verb} around the {place}. One day, it found a group of {plural_noun} and joined their adventures.</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block form %}
+    <h1>Enter your answers</h1>
+    <form method="post" action="/story/new" id="answersForm">
+        <label for="place">place: </label>
+        <input type="text" name="place" id="place" required>
+        <label for="noun">noun: </label>
+        <input type="text" name="noun" id="noun" required>
+        <label for="verb">verb: </label>
+        <input type="text" name="verb" id="verb" required>
+        <label for="adjective">adjective: </label>
+        <input type="text" name="adjective" id="adjective" required>
+        <label for="plural_noun">plural noun: </label>
+        <input type="text" name="plural_noun" id="plural_noun" required>
+        <input type="submit" name="" id="madlib_form_submit">
+    </form>
+{% endblock %}
